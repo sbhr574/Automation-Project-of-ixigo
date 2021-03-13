@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test_Case]">
+  <test thread-count="5" name="Dummy(failed)">
+    <classes>
+      <class name="com.ixigo.TestCase">
+        <methods>
+          <include name="SearchValidation"/>
+          <include name="setup"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.ixigo.TestCase -->
+    </classes>
+  </test> <!-- Dummy(failed) -->
+</suite> <!-- Failed suite [Test_Case] -->
