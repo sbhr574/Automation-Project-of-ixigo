@@ -1,37 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Test_Case" duration-ms="68799" started-at="2020-08-04T12:47:18Z" finished-at="2020-08-04T12:48:27Z">
+  <suite name="Test_Case" duration-ms="13339" started-at="2021-04-06T18:15:40Z" finished-at="2021-04-06T18:15:53Z">
     <groups>
     </groups>
-    <test name="Dummy" duration-ms="68799" started-at="2020-08-04T12:47:18Z" finished-at="2020-08-04T12:48:27Z">
+    <test name="Dummy" duration-ms="13339" started-at="2021-04-06T18:15:40Z" finished-at="2021-04-06T18:15:53Z">
       <class name="com.ixigo.TestCase">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.ixigo.TestCase@6a4f787b]" name="setup" is-config="true" duration-ms="10876" started-at="2020-08-04T12:47:18Z" finished-at="2020-08-04T12:47:29Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ixigo.TestCase@6a4f787b]" name="setup" is-config="true" duration-ms="5335" started-at="2021-04-06T18:15:40Z" finished-at="2021-04-06T18:15:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="PageValidation()[pri:0, instance:com.ixigo.TestCase@6a4f787b]" name="PageValidation" duration-ms="22" started-at="2020-08-04T12:47:29Z" finished-at="2020-08-04T12:47:29Z">
+        <test-method status="FAIL" signature="PageValidation()[pri:0, instance:com.ixigo.TestCase@6a4f787b]" name="PageValidation" duration-ms="254" started-at="2021-04-06T18:15:45Z" finished-at="2021-04-06T18:15:45Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [ixigo - Flights, Train Reservation, Hotels, Air Tickets, Bus Booking] but found [ixigo - Flights, IRCTC Train Booking, Bus Booking, Air Tickets & Hotels]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [ixigo - Flights, Train Reservation, Hotels, Air Tickets, Bus Booking] but found [ixigo - Flights, IRCTC Train Booking, Bus Booking, Air Tickets & Hotels]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at org.testng.asserts.Assertion$11.doAssert(Assertion.java:201)
+at org.testng.asserts.Assertion.executeAssert(Assertion.java:30)
+at org.testng.asserts.Assertion.doAssert(Assertion.java:15)
+at org.testng.asserts.Assertion.assertEquals(Assertion.java:198)
+at com.ixigo.TestCase.PageValidation(TestCase.java:21)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PageValidation -->
-        <test-method status="PASS" signature="EnteredData()[pri:1, instance:com.ixigo.TestCase@6a4f787b]" name="EnteredData" duration-ms="10771" started-at="2020-08-04T12:47:29Z" finished-at="2020-08-04T12:47:40Z">
+        <test-method status="PASS" signature="EnteredData()[pri:1, instance:com.ixigo.TestCase@6a4f787b]" name="EnteredData" duration-ms="7254" started-at="2021-04-06T18:15:45Z" finished-at="2021-04-06T18:15:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnteredData -->
-        <test-method status="PASS" signature="SearchValidation()[pri:2, instance:com.ixigo.TestCase@6a4f787b]" name="SearchValidation" duration-ms="41275" started-at="2020-08-04T12:47:40Z" finished-at="2020-08-04T12:48:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchValidation -->
-        <test-method status="PASS" signature="InputDataValidation()[pri:3, instance:com.ixigo.TestCase@6a4f787b]" name="InputDataValidation" duration-ms="71" started-at="2020-08-04T12:48:21Z" finished-at="2020-08-04T12:48:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InputDataValidation -->
-        <test-method status="PASS" signature="getFlightDetails()[pri:4, instance:com.ixigo.TestCase@6a4f787b]" name="getFlightDetails" duration-ms="1417" started-at="2020-08-04T12:48:21Z" finished-at="2020-08-04T12:48:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getFlightDetails -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.ixigo.TestCase@6a4f787b]" name="closeBrowser" is-config="true" duration-ms="4342" started-at="2020-08-04T12:48:22Z" finished-at="2020-08-04T12:48:27Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.ixigo.TestCase@6a4f787b]" name="closeBrowser" is-config="true" duration-ms="466" started-at="2021-04-06T18:15:53Z" finished-at="2021-04-06T18:15:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

@@ -5,8 +5,8 @@
     <classes>
       <class name="com.ixigo.TestCase">
         <methods>
-          <include name="SearchValidation"/>
           <include name="setup"/>
+          <include name="PageValidation"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.ixigo.TestCase -->

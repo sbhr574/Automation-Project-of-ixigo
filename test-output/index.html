@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Test_Case">
-              <span class="suite-name border-passed">Test_Case</span>
+              <span class="suite-name border-failed">Test_Case</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Test_Case">
-                    <span>C:\Users\Subhajit\Desktop\Project-1\ixigo\testNg.xml</span>
+                    <span>C:\Users\Subhajit\Desktop\jen\Automation-Project-of-ixigo\testNg.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Test_Case" class="hide-methods failed suite-Test_Case"> (hide)</a> <!-- hide-methods failed suite-Test_Case -->
+                      <a href="#" panel-name="suite-Test_Case" class="show-methods failed suite-Test_Case"> (show)</a> <!-- show-methods failed suite-Test_Case -->
+                    </span>
+                    <div class="method-list-content failed suite-Test_Case">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_Case" title="com.ixigo.TestCase" hash-for-method="PageValidation">PageValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Test_Case -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,26 +117,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Test_Case" title="com.ixigo.TestCase" hash-for-method="EnteredData">EnteredData</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Case" title="com.ixigo.TestCase" hash-for-method="InputDataValidation">InputDataValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Case" title="com.ixigo.TestCase" hash-for-method="PageValidation">PageValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Case" title="com.ixigo.TestCase" hash-for-method="SearchValidation">SearchValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Test_Case" title="com.ixigo.TestCase" hash-for-method="getFlightDetails">getFlightDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Test_Case -->
@@ -137,6 +131,25 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Test_Case" class="panel Test_Case">
+          <div class="suite-Test_Case-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.ixigo.TestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PageValidation">
+                  </a> <!-- PageValidation -->
+                  <span class="method-name">PageValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [ixigo - Flights, Train Reservation, Hotels, Air Tickets, Bus Booking] but found [ixigo - Flights, IRCTC Train Booking, Bus Booking, Air Tickets &amp; Hotels]
+	at com.ixigo.TestCase.PageValidation(TestCase.java:21)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Case-class-failed -->
           <div class="suite-Test_Case-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -150,40 +163,12 @@
                   <span class="method-name">EnteredData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InputDataValidation">
-                  </a> <!-- InputDataValidation -->
-                  <span class="method-name">InputDataValidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="PageValidation">
-                  </a> <!-- PageValidation -->
-                  <span class="method-name">PageValidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="SearchValidation">
-                  </a> <!-- SearchValidation -->
-                  <span class="method-name">SearchValidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getFlightDetails">
-                  </a> <!-- getFlightDetails -->
-                  <span class="method-name">getFlightDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Test_Case-class-passed -->
         </div> <!-- panel Test_Case -->
         <div panel-name="test-xml-Test_Case" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Subhajit\Desktop\Project-1\ixigo\testNg.xml</span>
+            <span class="header-content">C:\Users\Subhajit\Desktop\jen\Automation-Project-of-ixigo\testNg.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -232,32 +217,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SearchValidation')
+data.setCell(0, 1, 'EnteredData')
 data.setCell(0, 2, 'com.ixigo.TestCase')
-data.setCell(0, 3, 41275);
+data.setCell(0, 3, 7254);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'EnteredData')
+data.setCell(1, 1, 'PageValidation')
 data.setCell(1, 2, 'com.ixigo.TestCase')
-data.setCell(1, 3, 10771);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'getFlightDetails')
-data.setCell(2, 2, 'com.ixigo.TestCase')
-data.setCell(2, 3, 1417);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'InputDataValidation')
-data.setCell(3, 2, 'com.ixigo.TestCase')
-data.setCell(3, 3, 71);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'PageValidation')
-data.setCell(4, 2, 'com.ixigo.TestCase')
-data.setCell(4, 3, 22);
+data.setCell(1, 3, 254);
 window.suiteTableData['Test_Case']= { tableData: data, tableDiv: 'times-div-Test_Case'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 53 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Test_Case">
               </div> <!-- times-div-Test_Case -->
             </div> <!-- times-div -->
@@ -289,28 +262,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">PageValidation</span>
-                <span class="method-start">10884 ms</span>
+                <span class="method-start">5348 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">EnteredData</span>
-                <span class="method-start">10910 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">SearchValidation</span>
-                <span class="method-start">21683 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InputDataValidation</span>
-                <span class="method-start">62959 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">getFlightDetails</span>
-                <span class="method-start">63031 ms</span>
+                <span class="method-start">5608 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">64449 ms</span>
+                <span class="method-start">12863 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
