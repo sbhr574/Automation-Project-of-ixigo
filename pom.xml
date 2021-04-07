@@ -4,7 +4,7 @@
 
   <groupId>com</groupId>
   <artifactId>ixigo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1-ixigo</version>
   <packaging>jar</packaging>
 
   <name>ixigo</name>
