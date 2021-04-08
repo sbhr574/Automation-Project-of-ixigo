@@ -30,7 +30,8 @@ public class ConfigFileReader {
 	
 	
 	  public static Properties prop;
-	  public static String configPath = directory+"src"+File.separator+"main"+File.separator+"java"+File.separator+"com"+File.separator+"ixigo"+File.separator+"files"+File.separator+"config.properties";
+//	  public static String configPath = directory+"src"+File.separator+"main"+File.separator+"java"+File.separator+"com"+File.separator+"ixigo"+File.separator+"files"+File.separator+"config.properties";
+	  public static String configPath = "C:\\Users\\Subhajit\\.jenkins\\workspace\\Declarative_Pipeline\\src\\main\\java\\com\\ixigo\\files\\config.properties";
 	  
 	    //To create single object to Config Properties file through-out the project
 	    public static Properties getConfigPropObject() {
