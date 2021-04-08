@@ -1,15 +1,24 @@
 pipeline{
   agent any
-  stages{
-    stage('Git Checkout'){
-      steps{
-      echo 'Git repo checkout operation'
-      }
+       environment {
+         maven = '${MVN_HOME}'
+         jdk = '${JAVA_HOME}'
     }
-    stage('Build'){
-      steps{
-        echo 'This is a minimal pipeline.'
-      }
+    stages {
+      stage('Git Checkout'){
+        steps{
+           echo 'Git repo checkout operation'
+        }
+     }
+          stage ('Build') {
+            steps {
+                bat 'mvn clean package' 
+            }
+            post {
+                success {
+                    junit 'target/testNg.xml' 
+                }
+            }
+        }
     }
   }
-}
