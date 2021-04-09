@@ -14,11 +14,6 @@ pipeline{
             steps {
                 bat 'mvn clean package' 
             }
-            post {
-                success {
-                    junit 'target/testNg.xml' 
-                }
-            }
         }
     }
   }
