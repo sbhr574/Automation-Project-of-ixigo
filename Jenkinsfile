@@ -1,4 +1,3 @@
-currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.number
 pipeline{
   agent any
        environment {
@@ -17,4 +16,14 @@ pipeline{
             }
         }
   }
+      post {
+        success{
+          currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result.number
+        }
+        failure {
+            // in case of failure, we'd like to have simple 'git blame' on build history :)
+            currentBuild.displayName = 'This build needs help!!!'
+            buildDescription("Committer: ${GERRIT_PATCHSET_UPLOADER_NAME}")
+        }
+    }
 }
