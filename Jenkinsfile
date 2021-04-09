@@ -18,9 +18,12 @@ pipeline{
 
   }
   post{
+    success{
                 script{
-                            currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result
+                  currentBuild.result = 'SUCCESS'
+                  currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result
 
                 }
+              }
   }
 }
