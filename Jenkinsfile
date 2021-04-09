@@ -25,5 +25,13 @@ pipeline{
 
                 }
               }
+              failure {
+            // in case of failure, we'd like to have simple 'git blame' on build history :)
+            script{
+            currentBuild.result = 'FAILED'
+            currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result
+            buildDescription("Committer: ${GERRIT_PATCHSET_UPLOADER_NAME}")
+          }
+        }
   }
 }
