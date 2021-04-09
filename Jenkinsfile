@@ -14,7 +14,7 @@ pipeline{
             steps {
                 bat 'mvn clean package' 
                 script{
-                            currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.number
+                            currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result
 
                 }
             }
