@@ -14,12 +14,12 @@ pipeline{
             steps {
                 bat 'mvn clean package' 
             }
+            success{
+          currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result.number
+        }
         }
   }
       post {
-        success{
-          currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result.number
-        }
         failure {
             // in case of failure, we'd like to have simple 'git blame' on build history :)
             currentBuild.displayName = 'This build needs help!!!'
