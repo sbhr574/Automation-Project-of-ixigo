@@ -13,7 +13,7 @@ pipeline{
           stage ('Build') {
             steps {
                 bat 'mvn clean package' 
-          currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result.number
+          currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result
             }
         }
 
