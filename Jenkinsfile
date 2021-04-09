@@ -15,8 +15,10 @@ pipeline{
                 bat 'mvn clean package' 
             }
         }
+  }
+      post {
                     success{
           currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result.number
         }
-  }
+    }
 }
