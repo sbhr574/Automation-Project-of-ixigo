@@ -14,16 +14,9 @@ pipeline{
             steps {
                 bat 'mvn clean package' 
             }
-            success{
+        }
+                    success{
           currentBuild.displayName = "Declarative_Pipeline_#"+currentBuild.result.number
         }
-        }
   }
-      post {
-        failure {
-            // in case of failure, we'd like to have simple 'git blame' on build history :)
-            currentBuild.displayName = 'This build needs help!!!'
-            buildDescription("Committer: ${GERRIT_PATCHSET_UPLOADER_NAME}")
-        }
-    }
 }
