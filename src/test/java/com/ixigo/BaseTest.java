@@ -2,7 +2,6 @@ package com.ixigo;
 
 
 
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -92,11 +91,6 @@ public class BaseTest {
 
 	@BeforeClass
 	public void setup() {
-		@SuppressWarnings("resource")
-		Scanner sc= new Scanner(System.in); //System.in is a standard input stream.
-		System.out.print("Enter first number- ");
-		String url_value = sc.next();  
-		System.out.print("Entered first number- "+url_value);
 		initialization();
 	}
 
