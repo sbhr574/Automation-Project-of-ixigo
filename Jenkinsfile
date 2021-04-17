@@ -6,10 +6,10 @@ pipeline {
         message 'Should we continue?'
         id 'Yes, we should.'
         submitter 'me, my job'
-      }
         parameters {
           string(name: 'ENGINEER', defaultValue: 'Mr. Subhajit', description: 'Hello All...')
         }
+      }
       steps {
         echo 'Git repo checkout operation ${params.ENGINEER}'
       }
