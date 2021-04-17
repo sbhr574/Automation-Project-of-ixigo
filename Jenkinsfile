@@ -13,7 +13,7 @@ pipeline {
       steps {
         echo 'Git repo checkout operation ${params.ENGINEER}'
       }
-  }
+    }
 
     stage('Build') {
       when {
@@ -22,6 +22,7 @@ pipeline {
       steps {
         echo 'Started Clean and Build Process.'
         bat 'mvn clean install -DskipTests'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
