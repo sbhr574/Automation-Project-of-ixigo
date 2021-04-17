@@ -13,6 +13,7 @@ pipeline {
         echo 'Git repo checkout operation ${params.ENGINEER}'
       }
     }
+  }
 
     stage('Build') {
       when {
