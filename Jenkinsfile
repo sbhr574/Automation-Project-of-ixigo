@@ -2,12 +2,22 @@ pipeline {
   agent any
   stages {
     stage('Git Checkout') {
+      input {
+        message 'Should we continue?'
+        id 'Yes, we should.'
+        submitter 'me, my job'
+        parameters {
+          string(name: 'ENGINEER', defaultValue: 'Mr. Subhajit', description: 'Hello All...')
+        }
       steps {
-        echo 'Git repo checkout operation'
+        echo 'Git repo checkout operation ${params.ENGINEER}'
       }
     }
 
     stage('Build') {
+      when {
+        branch 'master'
+      }
       steps {
         echo 'Started Clean and Build Process.'
         bat 'mvn clean install -DskipTests'
