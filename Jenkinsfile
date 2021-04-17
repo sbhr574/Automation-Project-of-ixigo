@@ -37,7 +37,7 @@ pipeline {
 
         stage('archive artifacts') {
           steps {
-            archiveArtifacts(artifacts: 'target/ixigo_0.1V.jar', fingerprint: true)
+            archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
           }
         }
 
