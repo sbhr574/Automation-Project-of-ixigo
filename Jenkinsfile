@@ -27,9 +27,20 @@ pipeline {
     }
 
     stage('Test') {
-      steps {
-        echo 'Started test execution.'
-        bat 'mvn test -Dsurefire.suiteXmlFiles=testNg.xml'
+     parallel {
+        stage('Test') {
+          steps {
+            echo 'Started test execution.'
+            bat 'mvn test -Dsurefire.suiteXmlFiles=testNg.xml'
+          }
+        }
+
+        stage('archive artifacts') {
+          steps {
+            archiveArtifacts(artifacts: 'target/ixigo_0.1V.jar', fingerprint: true)
+          }
+        }
+
       }
     }
 
