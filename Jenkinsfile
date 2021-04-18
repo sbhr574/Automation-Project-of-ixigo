@@ -11,7 +11,8 @@ pipeline {
         }
       }
       steps {
-        echo 'Git repo checkout operation ${params.ENGINEER}'
+        echo "Git repo checkout operation ${params.ENGINEER}."
+        echo "Testing website name is ${Automation}."
       }
     }
 
@@ -58,7 +59,7 @@ pipeline {
   environment {
     maven = '${MVN_HOME}'
     jdk = '${JAVA_HOME}'
-    Automation = 'ixigo'
+    Automation = 'ixigo.com'
   }
   post {
     success {
