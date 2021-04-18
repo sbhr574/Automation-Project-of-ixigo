@@ -27,7 +27,7 @@ pipeline {
     }
 
     stage('Test') {
-     parallel {
+      parallel {
         stage('Test') {
           steps {
             echo 'Started test execution.'
@@ -58,6 +58,7 @@ pipeline {
   environment {
     maven = '${MVN_HOME}'
     jdk = '${JAVA_HOME}'
+    Automation = 'ixigo'
   }
   post {
     success {
