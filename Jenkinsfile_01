@@ -8,7 +8,7 @@ pipeline{
       stage('build'){
         steps{
           echo 'testing ${SERVER_CREDENTIAL}'
-          bat"${SERVER_CREDENTIAL}"
+          bat'${SERVER_CREDENTIAL}'
         }
       }
   }
