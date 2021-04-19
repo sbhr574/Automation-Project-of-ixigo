@@ -11,7 +11,7 @@ pipeline {
         }
       }
       steps {
-        echo "Git repo checkout operation ${params.ENGINEER}."
+        echo "Git repo checkout operation $ENGINEER."
         echo "Testing website name is ${Automation}."
       }
     }
@@ -46,6 +46,12 @@ pipeline {
     }
 
     stage('Example') {
+      when {
+        expression {
+          BRANCH_NAME == 'qa' || BRANCH_NAME == 'master'
+        }
+
+      }
       steps {
         echo "Hello ${params.PERSON}"
         echo "Biography: ${params.BIOGRAPHY}"
