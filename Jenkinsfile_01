@@ -6,7 +6,9 @@ pipeline{
     }
   stages{
       stage('build'){
-        echo 'testing ${SERVER_CREDENTIAL}'
+        steps{
+          echo 'testing ${SERVER_CREDENTIAL}'
+        }
       }
   }
 }
