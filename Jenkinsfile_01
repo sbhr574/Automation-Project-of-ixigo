@@ -7,8 +7,16 @@ pipeline{
   stages{
       stage('build'){
         steps{
-          echo 'testing ${SERVER_CREDENTIAL}'
+          echo 'build ${SERVER_CREDENTIAL}'
           bat'${SERVER_CREDENTIAL}'
+        }
+      }
+       stage('test'){
+        steps{
+          withCredentials([usernamePassword(credentials: 'gitRepo', usernameVariable: USER, passwordVariable: PWD)]){
+            echo 'some scripts we can write ${USER} ${PWD}'
+          }
+             
         }
       }
   }
