@@ -15,13 +15,6 @@ public class TestCase extends BaseTest{
 	
 	
 	@Test(priority = 0)
-	public void PageValidation() {	
-		String title = getBase().getInstance(LoginPage.class).getTitle();
-		hardAssert.assertEquals(title, "ixigo - Flights, IRCTC Train Booking, Bus Booking, Air Tickets & Hotels");	
-		
-	}
-	
-	@Test(priority = 1)
 	public void EnteredData() {
 		getBase().getInstance(LoginPage.class).enteredFromCity("Pune");
 		getBase().getInstance(LoginPage.class).enteredToCity("Hyderabad");
