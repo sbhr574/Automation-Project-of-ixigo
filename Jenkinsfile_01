@@ -1,23 +1,24 @@
-pipeline{
- agent any
- environment {
+pipeline {
+  agent any
+  stages {
+    stage('build') {
+      steps {
+        echo 'here some scripts we can write using this ${SERVER_CREDENTIAL}'
+      }
+    }
+
+    stage('test') {
+      steps {
+        withCredentials(bindings: [usernamePassword(credentialsId: 'gitRepo', usernameVariable: USER, passwordVariable: PWD)]) {
+          echo 'some scripts we can write ${USER} ${PWD}'
+        }
+
+      }
+    }
+
+  }
+  environment {
     VERSION = '1.3.0'
     SERVER_CREDENTIAL = credentials('gitRepo')
-    }
-  stages{
-      stage('build'){
-        steps{
-          echo 'build ${SERVER_CREDENTIAL}'
-          bat'${SERVER_CREDENTIAL}'
-        }
-      }
-       stage('test'){
-        steps{
-          withCredentials([usernamePassword(credentials: 'gitRepo', usernameVariable: USER, passwordVariable: PWD)]){
-            echo 'some scripts we can write ${USER} ${PWD}'
-          }
-             
-        }
-      }
   }
 }
