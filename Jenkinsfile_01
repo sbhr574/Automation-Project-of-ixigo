@@ -1,0 +1,13 @@
+pipeline{
+ agent any
+ environment {
+    VERSION = '1.3.0'
+    SERVER_CREDENTIAL = credentials('gitRepo')
+    }
+  stages{
+      stage('build'){
+        echo 'testing ${SERVER_CREDENTIAL}'
+        bat"${SERVER_CREDENTIAL}"
+      }
+  }
+}
