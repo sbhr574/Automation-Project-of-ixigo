@@ -4,7 +4,7 @@ pipeline {
     stage('Git Checkout') {
       steps {
         echo 'Git repo checkout operation.'
-        input(message: 'Git Checkout Operation', id: 'Git Operation', ok: 'Ok, Lets do it!')
+        input(message: 'Git Checkout Operation', id: 'Git Operation', ok: 'Ok, Lets do it!', submitter: 'Mr. Roy')
       }
     }
 
