@@ -3,9 +3,11 @@ pipeline {
   stages {
     stage('Git Checkout') {
       steps {
-        echo "Git repo checkout operation."
+        echo 'Git repo checkout operation.'
+        input(message: 'Git Checkout Operation', id: 'Git Operation', ok: 'Ok, Lets do it!')
       }
     }
+
     stage('Build') {
       when {
         branch 'master'
@@ -15,20 +17,11 @@ pipeline {
         bat 'mvn clean install -DskipTests'
       }
     }
+
     stage('Test') {
-          steps {
-            echo 'Started test execution.'
-            bat 'mvn test -Dsurefire.suiteXmlFiles=testNg.xml'
-          }
-    }
-    stage('Trigger Other Job') {
-      when {
-        expression {
-          BRANCH_NAME == 'qa' || BRANCH_NAME == 'master'
-        }
-      }
       steps {
-        build job: 'single-quotes', propagate: true, wait: true
+        echo 'Started test execution.'
+        bat 'mvn test -Dsurefire.suiteXmlFiles=testNg.xml'
       }
     }
 
@@ -37,5 +30,4 @@ pipeline {
     maven = '${MVN_HOME}'
     jdk = '${JAVA_HOME}'
   }
-
 }
