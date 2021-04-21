@@ -15,6 +15,7 @@ pipeline {
       steps {
         echo 'Started Clean and Build Process.'
         bat 'mvn clean install -DskipTests'
+        stash(name: 'Java 8', includes: 'target/**')
       }
     }
 
