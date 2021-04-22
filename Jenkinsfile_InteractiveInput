@@ -15,11 +15,20 @@ pipeline {
       steps {
         echo 'Started Clean and Build Process.'
         bat 'mvn clean install -DskipTests'
-        stash(name: 'Java 8', includes: 'target/**')
       }
     }
 
     stage('Test') {
+      post {
+        always {
+          archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+        }
+
+        success {
+          stash(name: 'Buzz Java 7', includes: 'target/**')
+        }
+
+      }
       steps {
         echo 'Started test execution.'
         bat 'mvn test -Dsurefire.suiteXmlFiles=testNg.xml'
